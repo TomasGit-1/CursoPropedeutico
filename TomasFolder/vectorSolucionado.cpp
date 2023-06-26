@@ -16,7 +16,7 @@ int creaVector(struct vector *v, int size){
 }
 
 int imprimirVector(struct vector *v){
-	for(int i=0; i< v->size; i++){
+	for(int i=0; i<=v->size; i++){
    		cout <<" "<<v->data[i];
    }
    cout<< endl;
@@ -32,7 +32,7 @@ int insertar(struct vector *v, int pos, int valor){
 		t->data=(int *)malloc (sizeof(int)*pos);
 		for(int i=0; i< v->size; i++)
 			t->data[i]=v->data[i];
-		t->data[pos-1]=valor;
+		t->data[pos]=valor;
 
 	    imprimirVector(t);
 		*v=*t;
